@@ -17,7 +17,7 @@ class GameBackground extends JComponent implements KeyListener
 	private gameover lose = new gameover();
 	private static final int DIAMETER=20;
 
-	
+	//creates game objects
 	public GameBackground( )
         {
                 elapsed = new Date( ).getTime( );
@@ -60,6 +60,7 @@ class GameBackground extends JComponent implements KeyListener
                 }
         }
 
+	//if a key is released do nothing
         public void keyReleased(KeyEvent e)
         {
                 //ditto
@@ -110,6 +111,7 @@ class GameBackground extends JComponent implements KeyListener
 		}
 		else
 		{
+			//you lose
 			lose.gameover();
 		}
 	}
