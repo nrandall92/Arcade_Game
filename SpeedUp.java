@@ -7,6 +7,7 @@ import java.util.*;
 import java.io.*;
 import javax.sound.sampled.*;
 
+//adds sounds for the collision
 class Sound 
 {
 private Clip clip;
@@ -47,7 +48,7 @@ private long last_play=0;
 	}
 }
 		
-
+//creates the speed up object
 class SpeedUp
 {
 	private int x, y, dx, dy;
@@ -72,6 +73,7 @@ class SpeedUp
 		g.fillOval((int)x,(int)y, DIAMETER, DIAMETER);
 	}
 
+	//checks for collision with the player
 	boolean collides(player ball) 
 	{
     		int cx = x + DIAMETER / 2;
@@ -98,10 +100,10 @@ class SpeedUp
     		y += (dy * dt);
 		Random r = new Random();
 
-    		/* check if we hit the snake head */
+    		//check if the player hit the speedup object
       		if(collides(ball)==true) 
 		{	
-        		/* change places */
+        		// change places and update score
         		x = r.nextInt(465) + 1;
 			y = r.nextInt(465) + 1;
 			sound.play();
