@@ -45,7 +45,7 @@ class player
                 x += (dx * dt);
                 y += (dy * dt);
 
-		
+		//if the player hits the edge of the screen, kill the player
                 if(y < 0 || y > 475 || x < 0 || x > 475)
 		{
 			stop();
