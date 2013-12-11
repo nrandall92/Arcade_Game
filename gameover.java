@@ -7,7 +7,7 @@ import java.io.*;
 import java.awt.event.*;
 import java.util.*;
 
-
+//creates the game over screen and tells the player score
 class gameover
 {
 protected int playerScore=0;
@@ -22,13 +22,16 @@ protected int playerScore=0;
 		score.setHorizontalAlignment(JLabel.CENTER);
 		frame.add(score);
 
+		//adds the quit button and adds the action listener
 		JButton quit = new JButton("Exit Game");
 		frame.getContentPane().add(quit);
-		quit.addActionListener(new ActionListener(){
-				public void actionPerformed(ActionEvent e) {
+		quit.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				System.exit(0);
-				}
-				});
+			}
+		});
 
 		frame.setSize(200,75);
 		frame.setVisible(true);
