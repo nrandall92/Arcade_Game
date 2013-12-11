@@ -26,7 +26,7 @@ class obstacle
 		g.fillOval((int)x,(int)y, DIAMETER, DIAMETER);
 	}
 
-	
+	//collision with the player
 	boolean collides(player ball)
         {
                 int cx = x + DIAMETER / 2;
@@ -55,7 +55,7 @@ class obstacle
                 /* check if we hit the player */
                 if(collides(ball)==true)
                 {
-			//head to game over screen
+			//if it collides set game status to true and send it to the game background
 			ball.stop();
 			ball.color= new Color(0,0,50);
 			gameStatus=true;
